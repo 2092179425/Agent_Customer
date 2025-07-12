@@ -52,7 +52,12 @@ cd Agent_Customer/backend
 ```bash
 pip install -r requirements.txt  # 如果有 requirements.txt 文件
 ```
-3. 启动后端服务（假设使用 uvicorn 运行 FastAPI 项目）：
+3. 修改main.py中的API token和bot id为你的
+```bash
+COZE_API_TOKEN = os.getenv("COZE_API_TOKEN", "your token")
+BOT_ID = os.getenv("BOT_ID", "your bot id")
+```
+4. 启动后端服务（假设使用 uvicorn 运行 FastAPI 项目）：
 ```bash
 uvicorn main:app --reload
 ```
